@@ -1,4 +1,9 @@
-$body-font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
+@import "foundation/functions",
+		"foundation/settings";
+
+$body-bg: #191919 !default;
+$body-font-color: #fff !default;
+$body-font-family: "Helvetica Neue",Helvetica,Helvetica,Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
 
 $code-color: #910b0e;
 $code-font-family: initial;
@@ -8,3 +13,5 @@ $code-border-size: initial;
 $code-border-style: initial;
 $code-border-color: initial;
 $code-padding: initial;
+
+
