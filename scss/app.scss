@@ -1,8 +1,5 @@
 @import "settings";
-
-// Or selectively include components
-@import
-  "foundation/components/accordion",
+@import "foundation/components/accordion" ,
   "foundation/components/alert-boxes",
   "foundation/components/block-grid",
   "foundation/components/breadcrumbs",
@@ -36,7 +33,157 @@
   "foundation/components/type",
   "foundation/components/offcanvas",
   "foundation/components/visibility";
-//  "foundation/components/switch"
 
-.row.showcase-image-list {max-width: none;}
-.row.showcase-image-list.row {max-width: none;}
+.row.showcase-image-list {
+	max-width: none;
+	.row {
+		max-width: none;
+	}
+
+	.columns {
+		a {
+			display: inline-block;
+			width: 100%;
+			position: relative;
+		}
+
+		.showcase-image-wrapper {
+			height: 300px;
+			.profile-info {
+				position: absolute;
+				left: .9375rem;
+				right: .9375rem;
+				bottom: .9375rem;
+				.profile-name * {
+					font-size: 2.3125rem;
+					line-height: 2.3125rem;
+					color: #fff;
+				}
+
+				.indicators {
+					font-size: 1rem;
+					line-height: 1rem;
+					.indicator {
+						display: inline-block;
+						margin-right: .625rem;
+					}
+
+					.data {
+						color: #fff;
+						font-weight: 700;
+					}
+				}
+
+				h1 {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.showcase-overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			display: block;
+			background: #000;
+			opacity: 0;
+			-webkit-transition: opacity .25s ease-in-out;
+			-moz-transition: opacity .25s ease-in-out;
+			transition: opacity .25s ease-in-out
+		}
+
+		.img-overlay {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 7.5rem;
+			display: block;
+			background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .8) 70%, rgba(0, 0, 0, .9) 100%);
+			background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .8) 70%, rgba(0, 0, 0, .9) 100%);
+			background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .8) 70%, rgba(0, 0, 0, .9) 100%);
+		}
+
+		.image-loading {
+			height: 300px;
+			width: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-size: 52px auto;
+			background-image: url(https://peppr.it/images/e313949c.loading.gif);
+			background-position: 50%;
+			background-repeat: no-repeat;
+			z-index: -1
+		}
+
+		div.image {
+			background-size: cover;
+			background-position: 50% 50%;
+			z-index: 0
+		}
+	}
+}
+
+$namespace: "ibilliards";
+
+[class *= " #{$namespace}-icon-"] , [class ^= #{$namespace}-icon-] {
+	speak: none;
+	font-style: normal;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale
+}
+
+.#{$namespace}-icon-distance:before {
+    content: "\e609"
+}
+
+.#{$namespace}-icon-price:before {
+    content: "\e60c"
+}
+
+a {
+	color: #b6422b;
+	text-decoration: none;
+	line-height: inherit
+}
+
+a:focus , a:hover {
+	color: #9d3725
+}
+
+a img {
+	border: 0
+}
+
+::-webkit-scrollbar-track-piece {
+	background-color: $body-bg;
+	-webkit-border-radius: 0
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px
+}
+
+::-webkit-scrollbar-thumb {
+	height: 50px;
+	background-color: #999;
+	-webkit-border-radius: 4px;
+	outline: 2px solid $body-bg;
+	outline-offset: -2px;
+	border: 2px solid $body-bg
+}
+
+::-webkit-scrollbar-thumb:hover {
+	height: 50px;
+	background-color: #9f9f9f;
+	-webkit-border-radius: 4px
+}
+
