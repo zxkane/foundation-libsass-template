@@ -38,11 +38,35 @@
   "foundation/components/offcanvas",
   "foundation/components/visibility";
 
+/* escort 
+ * list page
+ * */
 $imageHeight: 300px;
+$imagePreLocation: "../images";
+$escortImagePreLocation: "#{$imagePreLocation}/escort";
 
 @media only screen and (min-width: 40.063em) {
   .tab-bar-section {
     text-align:left
+  }
+}
+
+#menu-tip, #filter-tip {
+  visibility: visible;
+  display: block;
+  width: auto;
+  top: 45px;
+  bottom: auto;
+}
+#menu-tip {
+  left: 10px;
+}
+#filter-tip {
+  left: auto;
+  right: 10px;
+  .nub {
+    left: auto;
+    right: 5px;
   }
 }
 
@@ -201,11 +225,12 @@ $imageHeight: 300px;
 
   .location-indicator {
     padding-left: 1.2rem;
-    background: url(../images/location_icon.png) 0 center no-repeat;
+    background: url(#{$escortImagePreLocation}/location_icon.png) 0 center no-repeat;
   }
 
   .distance-indicator {
     padding-left: 1.2rem;
-    background: url(../images/distance_icon.png) 0 center no-repeat;
+    background: url(#{$escortImagePreLocation}/distance_icon.png) 0 center no-repeat;
   }
 }
+

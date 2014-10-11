@@ -80,6 +80,7 @@ $include-html-global-classes: $include-html-classes;
 // $include-xl-html-grid-classes: false;
 
 // $row-width: rem-calc(1000);
+$row-width: none;
 // $total-columns: 12;
 // $column-gutter: rem-calc(30);
 
@@ -1344,6 +1345,7 @@ $include-xl-html-block-grid-classes: true;
 
 // $tooltip-padding: rem-calc(12);
 // $tooltip-bg: $oil;
+$tooltip-bg: #c4271a;
 // $tooltip-font-size: rem-calc(14);
 // $tooltip-font-weight: $font-weight-normal;
 // $tooltip-font-color: $white;

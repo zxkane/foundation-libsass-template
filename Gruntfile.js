@@ -11,7 +11,8 @@ module.exports = function(grunt) {
           outputStyle: 'compressed'
         },
         files: {
-          '../billiards/static/css/app.css': 'scss/app.scss'
+          '../billiards/static/css/app.css': 'scss/app.scss',
+          '../billiards/static/css/escort/detail.css': 'scss/detail.scss'
         }        
       }
     },
