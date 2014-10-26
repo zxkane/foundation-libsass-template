@@ -1,49 +1,45 @@
-@import "settings";
+@import "../settings";
+// @import "foundation";
 
 // Or selectively include components
-@import
-  "foundation/components/accordion",
-  "foundation/components/alert-boxes",
-  "foundation/components/block-grid",
-  "foundation/components/breadcrumbs",
-  "foundation/components/button-groups",
-  "foundation/components/buttons",
-  "foundation/components/clearing",
-  "foundation/components/dropdown",
-  "foundation/components/dropdown-buttons",
-  "foundation/components/flex-video",
-  "foundation/components/forms",
-  "foundation/components/grid",
-  "foundation/components/inline-lists",
-  "foundation/components/joyride",
-  "foundation/components/keystrokes",
-  "foundation/components/labels",
-  "foundation/components/magellan",
-  "foundation/components/orbit",
-  "foundation/components/pagination",
-  "foundation/components/panels",
-  "foundation/components/pricing-tables",
-  "foundation/components/progress-bars",
-  "foundation/components/reveal",
-  "foundation/components/side-nav",
-  "foundation/components/split-buttons",
-  "foundation/components/sub-nav",
-//  "foundation/components/switch",
-  "foundation/components/tables",
-  "foundation/components/tabs",
-  "foundation/components/thumbs",
-  "foundation/components/tooltips",
-  "foundation/components/top-bar",
-  "foundation/components/type",
-  "foundation/components/offcanvas",
-  "foundation/components/visibility";
+// @import
+//   "foundation/components/accordion",
+//   "foundation/components/alert-boxes",
+//   "foundation/components/block-grid",
+//   "foundation/components/breadcrumbs",
+//   "foundation/components/button-groups",
+//   "foundation/components/buttons",
+//   "foundation/components/clearing",
+//   "foundation/components/dropdown",
+//   "foundation/components/dropdown-buttons",
+//   "foundation/components/flex-video",
+//   "foundation/components/forms",
+//   "foundation/components/grid",
+//   "foundation/components/inline-lists",
+//   "foundation/components/joyride",
+//   "foundation/components/keystrokes",
+//   "foundation/components/labels",
+//   "foundation/components/magellan",
+//   "foundation/components/orbit",
+//   "foundation/components/pagination",
+//   "foundation/components/panels",
+//   "foundation/components/pricing-tables",
+//   "foundation/components/progress-bars",
+//   "foundation/components/reveal",
+//   "foundation/components/side-nav",
+//   "foundation/components/split-buttons",
+//   "foundation/components/sub-nav",
+//   "foundation/components/switches",
+//   "foundation/components/tables",
+//   "foundation/components/tabs",
+//   "foundation/components/thumbs",
+//   "foundation/components/tooltips",
+//   "foundation/components/top-bar",
+//   "foundation/components/type",
+//   "foundation/components/offcanvas",
+//   "foundation/components/visibility";
 
-/* escort 
- * list page
- * */
 $imageHeight: 300px;
-$imagePreLocation: "../images";
-$escortImagePreLocation: "#{$imagePreLocation}/escort";
 
 @media only screen and (min-width: 40.063em) {
   .tab-bar-section {
@@ -223,14 +219,11 @@ $escortImagePreLocation: "#{$imagePreLocation}/escort";
     background-color: #c4271a;
   }
 
-  .location-indicator {
-    padding-left: 1.2rem;
-    background: url(#{$escortImagePreLocation}/location_icon.png) 0 center no-repeat;
-  }
-
-  .distance-indicator {
-    padding-left: 1.2rem;
-    background: url(#{$escortImagePreLocation}/distance_icon.png) 0 center no-repeat;
+  .location-indicator .icon, .distance-indicator .icon {
+    color: #c4271a;
+    font-size: 1.2em;
+    margin-right: 0.2em;
+    vertical-align: text-bottom;
   }
 }
 

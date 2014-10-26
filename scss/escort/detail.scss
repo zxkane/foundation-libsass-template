@@ -1,5 +1,5 @@
-@import "settings";
-@import "foundation";
+@import "../settings";
+//@import "foundation";
 
 // Or selectively include components
 // @import
@@ -117,14 +117,11 @@ body {
     background-color: #c4271a;
   }
 
-  .location-indicator {
-    padding-left: 1.2rem;
-    background: url(#{$escortImagePreLocation}/location_icon.png) 0 center no-repeat;
-  }
-
-  .distance-indicator {
-    padding-left: 1.2rem;
-    background: url(#{$escortImagePreLocation}/distance_icon.png) 0 center no-repeat;
+  .location-indicator .icon, .distance-indicator .icon {
+    color: #c4271a;
+    font-size: 1.2em;
+    margin-right: 0.2em;
+    vertical-align: text-bottom;
   }
 }
 
@@ -168,16 +165,17 @@ body {
 
 .profile-accordion, .avail-accordion {
   dd > a b {
-    background: url("#{$escortImagePreLocation}/event_profile_pic.png") left center no-repeat;
     color: #fff;
     font-size: 20px;
     line-height: 32px;
-    padding-left: 40px;
+    .icon {
+      color: #c4271a;
+      font-size: 1.2em;
+      vertical-align: text-bottom;
+      font-weight: normal;
+      margin-right: 0.3em;
+    }
   }
-}
-
-.avail-accordion dd > a b {
-  background: url("#{$escortImagePreLocation}/event_avail_pic.png") left center no-repeat;
 }
 
 .icon_bar{ padding:10px 0px; background:#2a2a2a; color:#ffffff !important}

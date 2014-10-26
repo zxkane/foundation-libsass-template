@@ -4,17 +4,26 @@ module.exports = function(grunt) {
 
     sass: {
       options: {
-        includePaths: ['bower_components/foundation/scss']
+        includePaths: ['bower_components/foundation/scss'],
+        outputStyle: 'compressed'
       },
       dist: {
-        options: {
-          outputStyle: 'compressed'
-        },
         files: {
-          '../billiards/static/css/app.css': 'scss/app.scss',
-          '../billiards/static/css/escort/detail.css': 'scss/detail.scss'
+          '../billiards/static/css/app.css': 'scss/fd.scss',
         }        
-      }
+      },
+      escort: {
+    	  files: grunt.file.expandMapping([
+    	                                   "scss/escort/*.scss",
+    	                                   ], '', {
+    		  expand: true,
+    		  ext: '.css',
+    		  rename: function(base, src) {
+    			  grunt.log.write(base + " " + src);
+    			  return src.replace('scss/', '../billiards/static/css/'); // or some variation
+    		  }
+    	  })      
+        },
     },
 
     watch: {
