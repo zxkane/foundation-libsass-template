@@ -168,6 +168,19 @@ $imageHeight: 300px;
     background-position: center center;
     height: $imageHeight;
   }
+  
+  .image-loading {
+    height: $imageHeight;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size: 52px auto;
+    background-image: url('../../images/loading.gif');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    z-index: -1
+  }
 
   .img-overlay {
     position: absolute;
